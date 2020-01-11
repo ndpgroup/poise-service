@@ -1,5 +1,8 @@
 [Unit]
 Description=<%= @name %>
+<% if @options['after_target'] && ! @options['after_target'].empty? -%>
+After=<%= @options['after_target'] %><%= '.target' unless @options['after_target'].include?('.') %>
+<% end -%>
 
 [Service]
 Environment=<%= @environment.map {|key, val| %Q{"#{key}=#{val}"} }.join(' ') %>

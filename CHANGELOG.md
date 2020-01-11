@@ -1,5 +1,9 @@
 # Poise-Service Changelog
 
+## v1.5.3 (NDP)
+
+* Implement `after_target` option for systemd.
+
 ## v1.5.2
 
 * Set `declared_type` on the mixin-created `poise_service` resource so it works
